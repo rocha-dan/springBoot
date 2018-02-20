@@ -73,6 +73,6 @@ public class EmployeeController {
 	@PostMapping("/newPhoto")
 	public String addPhoto(Photo e) {
 		photoService.savePhoto(e);
-		return "redirect:/photos2";
+		return "redirect:/";
 	}
 }
