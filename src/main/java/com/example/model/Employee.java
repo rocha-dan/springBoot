@@ -4,14 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 @Entity
 public class Employee {
 	
-	@Id
+	@Id	
 	@GeneratedValue
 	@Column(name="id")
 	private long id;

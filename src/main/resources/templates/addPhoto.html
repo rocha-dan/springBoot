@@ -1,0 +1,40 @@
+<html >
+<!--  HEADER  -->
+<head th:include="fragments/header :: header">
+<meta charset="utf-8" />
+</head>
+
+<!--  CONTEUDO  -->
+<body
+	style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #4D0000">
+
+	<div th:replace="fragments/cabecalho :: cabecalho"></div>
+
+	<div class="conteudo">
+
+			<h1>New Photo</h1>
+
+
+			<div >
+				<form action="#" th:action="@{/newPhoto}" th:object="${photo}"
+					method="post">
+ <div class="form-group">
+    <label for="formGroupExampleInput">Titulo</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" th:field="*{titulo}">
+    <label for="formGroupExampleInput2">Descrição</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" th:field="*{descricao}">
+    <label for="formGroupExampleInput2">Url</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" th:field="*{url}">
+  </div>				
+
+					<p>
+						<input type="submit" value="Salvar" class="btn btn-success" /> <input
+							type="reset" value="Limpar" class="btn btn-danger" />
+					</p>
+				</form>
+		</div>
+	</div>
+	<!--  FOOTER  -->
+	<div th:include="fragments/footer :: footer"></div>
+</body>
+</html>
