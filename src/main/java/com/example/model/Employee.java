@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Employee {
@@ -16,7 +19,8 @@ public class Employee {
 	private String name;
 	@Column(name="last_name")
 	private String lastName;
-	@Column(name="email")
+	@Column(name="email", nullable=false)
+	@Size(max = 40)
 	private String email;
 	@Column(name="phone")
 	private String phone;
