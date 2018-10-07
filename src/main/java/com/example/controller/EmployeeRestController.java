@@ -30,7 +30,7 @@ public class EmployeeRestController {
 		return employeeService.getAllEmployees();
 	}
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
-	public Employee getEmployeeById(@PathVariable("id") long id){
+	public Employee getEmployeeById(@PathVariable("id") String id){
 		return employeeService.getEmployeeById(id);
 	}
 

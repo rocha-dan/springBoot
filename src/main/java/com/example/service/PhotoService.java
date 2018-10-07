@@ -8,7 +8,7 @@ import com.example.model.Photo;
 public interface PhotoService {
 	
 	public List<Photo> getAllPhotos();
-	public Photo getPhotoById(long id);
+	public Photo getPhotoById(String id);
 	public Photo savePhoto(Photo e);
 	
 }

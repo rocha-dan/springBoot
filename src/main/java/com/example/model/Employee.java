@@ -1,28 +1,15 @@
 package com.example.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.validation.constraints.Size;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection="Employee")
 public class Employee {
 	
-	@Id	
-	@GeneratedValue
-	@Column(name="id")
-	private long id;
-	@Column(name="name")
+	private String id;
 	private String name;
-	@Column(name="last_name")
 	private String lastName;
-	@Column(name="email", nullable=false)
-	@Size(max = 40)
 	private String email;
-	@Column(name="phone")
 	private String phone;
-	@Column(name="active")
 	private boolean active;
 	
 	public Employee() {
@@ -38,10 +25,10 @@ public class Employee {
 		this.active = active;
 	}
 	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {

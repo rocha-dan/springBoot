@@ -1,25 +1,21 @@
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection="Photo")
 public class Photo {
 	
+	private String id;
 	private String titulo;
 	private String url;
 	private String descricao;
 	
-	@Id	
-	@GeneratedValue
-	private Long id;
 	
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	

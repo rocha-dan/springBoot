@@ -18,8 +18,8 @@ public class PhotoServiceImpl implements PhotoService {
 		return photoRepository.findAll();
 	}
 
-	public Photo getPhotoById(long id) {
-		return photoRepository.findOne(id);
+	public Photo getPhotoById(String id) {
+		return photoRepository.findById(id).get();
 	}
 
 	public Photo savePhoto(Photo e) {

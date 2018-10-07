@@ -7,7 +7,7 @@ import com.example.model.Employee;
 public interface EmployeeService {
 	
 	public List<Employee> getAllEmployees();
-	public Employee getEmployeeById(long id);
+	public Employee getEmployeeById(String id);
 	public Employee saveEmployee(Employee e);
 	
 }
